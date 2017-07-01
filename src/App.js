@@ -4,7 +4,7 @@ import './App.css';
 import SiderBar from './components/SiderBar'
 import HeaderBar from './components/HeaderBar'
 import './style/index.css';
-const {Content} = Layout
+const {Content,Footer} = Layout
 
 class App extends Component {
   render() {
@@ -16,6 +16,9 @@ class App extends Component {
           <Content style={{ margin: '0 16px', overflow: 'initial' }}>
             {this.props.children}
           </Content>
+          <Footer style={{textAlign:'center'}}>
+            这是个页脚
+            </Footer>
         </Layout>
       </Layout>
     );
