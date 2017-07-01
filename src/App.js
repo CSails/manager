@@ -4,18 +4,22 @@ import './App.css';
 import SiderBar from './components/SiderBar'
 import HeaderBar from './components/HeaderBar'
 import './style/index.css';
- 
-  class App extends Component {
-    render() {
-      return (
-        <Layout  className="ant-layout-has-sider" style={{height:'100%'}}>
-        <SiderBar  />
+const {Content} = Layout
+
+class App extends Component {
+  render() {
+    return (
+      <Layout className="ant-layout-has-sider" style={{ height: '100%' }}>
+        <SiderBar />
         <Layout>
-          <HeaderBar/>
+          <HeaderBar />
+          <Content style={{ margin: '0 16px', overflow: 'initial' }}>
+            {this.props.children}
+          </Content>
         </Layout>
-        </Layout>
-      );
-    }
+      </Layout>
+    );
   }
+}
 
 export default App;
